@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCORDIAN</title>
+    <link rel="icon" href="ipic1.png" type="icon/type">
+    <style>
+        ul li a {
+            justify-content: space-evenly;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            text-transform: capitalize;
+
+        }
+
+        ul {
+
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: black;
+            width: 600px;
+            height: 29px;
+            margin-left: 260px;
+            margin-top: 20px;
+            padding-top: 15px;
+            padding-bottom: 5px;
+            border-radius: 40px;
+
+        }
+
+        li a {
+            margin-top: 10px;
+        }
+
+        section {
+            min-height: 100vh;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 30;
+
+        }
+
+        h2 {
+            margin-top: 10px;
+            font-size: 60px;
+        }
+
+        .faq {
+            max-width: 700px;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #000;
+            cursor: pointer;
+        }
+
+        .question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .question h3 {
+            font-size: 1.8rem;
+
+
+        }
+
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transform: max-height 1.4s ease;
+        }
+
+        .answer p {
+            padding-top: 1rem;
+            line-height: 1.6;
+        }
+
+        .faq.active .answer {
+            max-height: 200px;
+            animation: HA 1s ease-in;
+        }
+
+        @keyframes HA {
+            from {
+                opacity: 0;
+                transform: translate(0-1);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul style="list-style: none;">
+        
+        <li><a href="/accordian/Acc.html">ACCORDIAN</a></li>
+        <li><a href="/colour/Color.html">COLOUR</a></li>
+        <li><a href="/gallery/Gallery.html">Gallery</a></li>
+        <li><a href="/drop/Drop.html">Drop</a></li>
+    </ul>
+    <section>
+        <h2>Questions:</h2>
+        <div class="faq">
+            <div class="question">
+                <h1>What is HTML!?</h1>
+                <h4>Read More</h4>
+
+            </div>
+            <div class="answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit illo voluptatum iure minus culpa
+                    reprehenderit, totam deleniti fugiat vero beatae ad explicabo ea exercitationem perferendis ipsum
+                    architecto! At hic officia, aliquam magni sequi maxime.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h1>What is CSS!?</h1>
+                <h4>Read More</h4>
+            </div>
+            <div class="answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae deleniti nemo voluptatem facilis
+                    totam vero, est accusamus non neque ipsum sapiente laudantium similique explicabo!</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        let faq = document.querySelectorAll('.faq');
+        faq.forEach(faq => {
+            faq.addEventListener('click', function () {
+                faq.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

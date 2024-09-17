@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Changer</title>
+    <link rel="icon" href="color_wheel.png" type="icon/type">
+    <style>
+        
+        
+        div {
+            width: 25%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: white;
+            margin-top: 130px;
+            margin-left: 480px;
+        }
+
+        #a {
+            flex: 1;
+            background: #e58e26;
+            color: #e58e26;
+        }
+
+        #b {
+            flex: 1;
+            background: #b71540;
+            color: #b71540;
+        }
+
+        #c {
+            flex: 1;
+            background: #0c2461;
+            color: #0c2461;
+        }
+
+        #d {
+            flex: 1;
+            background: #78e08f;
+            color: #78e08f;
+        }
+
+        #h {
+            flex: 1;
+            background: #fd79a8;
+            color: #fd79a8;
+        }
+        .heading{
+            margin-top: 90px;
+            margin-left: 350px;
+            font-size: 65px;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        span1{
+            color: #912e51;
+        }
+        span{
+            color: blue;
+        }
+        ul li a {
+            justify-content: space-evenly;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            text-transform: capitalize;
+
+        }
+
+        ul {
+
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: black;
+            width: 600px;
+            height: 29px;
+            margin-left: 260px;
+            margin-top: 20px;
+            padding-top: 15px;
+            padding-bottom: 5px;
+            border-radius: 40px;
+
+        }
+
+        li a {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body bgcolor="skyblue">
+    <ul style="list-style: none;">
+        
+        <li><a href="/accordian/Acc.html">ACCORDIAN</a></li>
+        <li><a href="/colour/Color.html">COLOUR</a></li>
+        <li><a href="/gallery/Gallery.html">Gallery</a></li>
+        <li><a href="/drop/Drop.html">Drop</a></li>
+    </ul>
+
+    <h1 class="heading"> <span>COLOUR</span> <span1>CHANGER:</span1></h1 >
+    <div>
+       
+        <a onclick="bgchange(id)" id="a">#e58e26</a>
+        <a onclick="bgchange(id)" id="b">#b71540</a>
+        <a onclick="bgchange(id)" id="c">#0c2461</a>
+        <a onclick="bgchange(id)" id="d">#78e08f</a>
+        <a onclick="bgchange(id)" id="h">#fd79a8</a>
+
+    </div>
+
+    <script>
+        let bgchange = (id) => {
+            document.body.style.background = document.getElementById(id).innerHTML;
+        }
+    </script>
+</body>
+
+
+</html>

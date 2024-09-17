@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="icon" href="i1.jpg" type="icon/type">
+    <style>
+ 
+
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-image img {
+    width: 500px;
+    height: auto;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.thumbnail:hover {
+    border: 2px solid #666;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="gallery-container">
+        <div class="main-image">
+            <img id="displayedImage"src=img.jpg alt="Main Display">
+        </div>
+        <div class="thumbnails">
+            <img src="img1.jpg" alt="Thumbnail 1" class="thumbnail">
+            <img src="i1.jpg" alt="Thumbnail 2" class="thumbnail">
+            <img src="img4.jpg" alt="Thumbnail 3" class="thumbnail">
+            <img src="img3.jpg" alt="Thumbnail 4" class="thumbnail">
+            <img src="i2.jpg" alt="Thumbnail 5" class="thumbnail">
+            <img src="images (5).jpg" alt="Thumbnail 6" class="thumbnail">
+            <img src="images (4).jpg" alt="Thumbnail 7" class="thumbnail">
+            <img src="ii.jpg" alt="Thumbnail 8" class="thumbnail">
+
+
+            
+        </div>
+    </div>
+    <script >
+        document.addEventListener('DOMContentLoaded', function() {
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const displayedImage = document.getElementById('displayedImage');
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+            displayedImage.src = thumbnail.src;
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
